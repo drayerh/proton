@@ -1,6 +1,6 @@
 FROM maven:3.9.9-eclipse-temurin-21-jammy AS build_image
 RUN git clone https://github.com/drayerh/proton.git
-RUN cd vprofile-project && git checkout docker && mvn install
+RUN cd proton && git checkout docker && mvn install
 
 FROM tomcat:10-jdk21
 
